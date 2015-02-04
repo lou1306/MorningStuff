@@ -73,7 +73,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active fill">
-          <img src="img/pbass.jpg" alt="First slide">
+          <img src="img/pbass.jpg" alt="First slide" id="pbass">
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
@@ -200,8 +200,22 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      var w;
+      $(document).load(function() {
+        w = $(window).width();
+      });
+      $(window).resize(function() {
+        if (w != $(window).width()) {
+          w = $(window).width();
+          activeItem = $(".item.active");
+          img = activeItem.find("img");
+          img.css("margin-top", Math.round((img.height()-activeItem.height())/2))
+          console.log(Math.round((activeItem.height()-img.height())/2))
+        }
+      });
+    </script>
   </body>
 </html>

@@ -12,6 +12,19 @@ body {
 -------------------------------------------------- */
 
 
+/* Set navbar background color */
+
+.navbar-custom {
+  background-color: #222;
+  border-color: #101010;
+  margin-bottom: 0;
+  border: 0;
+  padding: 0 15px;
+  color: #feed96;
+}
+
+/* Brand */
+
 .navbar-brand {
   font-family: 'Chewy', cursive;
   font-size: 2em;
@@ -28,15 +41,7 @@ body {
 }
 
 
-/* Set navbar background color */
-.navbar-custom {
-  background-color: #222;
-  border-color: #101010;
-  margin-bottom: 0;
-  border: 0;
-  padding: 0 15px;
-  color: #feed96;
-}
+/* Dropdown */
 
 .dropdown-menu-inverse {
   background-color: #222;
@@ -63,6 +68,7 @@ body {
   background-color: transparent;
 }
 
+/* Collegamenti */
 
 .navbar-custom .navbar-nav > .active > a, 
 .navbar-custom .navbar-nav > .active > a:hover, 
@@ -71,10 +77,13 @@ body {
   color: #fee250;
   background-color: #c93c18;
 }
+
 .navbar-custom .navbar-nav > li > a {
+  font-weight: bold;
   color: #feed96;
   background-color: transparent;
 }
+
 .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
   color: #fee250;
 }
@@ -110,15 +119,12 @@ body {
 .carousel .item {
   height: 500px;
   background-color: transparent;
-  /*overflow: visible;*/
-  vertical-align: middle;
+  overflow: hidden;
 }
 .carousel-inner > .item > img {
-/*  position: relative;
-  top: -25%;
-  width: auto;
-  min-height: 125%
-*/}
+  width: 100%;
+  height: auto;
+}
 
 /* Mobile */
 @media (max-width: 479px) {
@@ -145,7 +151,7 @@ body {
 
 /* desktops */
 @media (min-width: 1024px) {
-  .carousel, .carousel .item, .item > img {
+  .carousel, .carousel .item {
        height: 700px;
        min-height: 700px;
   }

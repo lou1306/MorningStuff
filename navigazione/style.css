@@ -3,24 +3,34 @@
 /* Padding below the footer and lighter body text */
 
 body {
+  transition: all 0.2s ease-in-out;
   padding-bottom: 40px;
   color: #5a5a5a;
+  background-color: #fffff0;
+}
+
+footer {
+    margin-top: 30px;
 }
 
 
-/* CUSTOMIZE THE NAVBAR
+/* NAVBAR
 -------------------------------------------------- */
 
 
-/* Set navbar background color */
+/* Proprietà globali della Navbar */
 
 .navbar-custom {
   background-color: #222;
   border-color: #101010;
   margin-bottom: 0;
   border: 0;
-  padding: 0 15px;
   color: #feed96;
+}
+
+.navbar-nav >li >a {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Brand */
@@ -30,16 +40,44 @@ body {
   font-size: 2em;
   color: #feed96;
 }
-.navbar-brand:hover {
-    color: #fee250;
+
+/* Link ai Social Network */
+
+#social a {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 50px;
 }
 
-@media (min-height: 600px) {
-  .navbar-fixed-top .navbar-collapse {
-    max-height: none;
-  }
+#language, .social-mobile {
+    text-align: center;
 }
 
+#language > li{
+    width: 50px;
+}
+
+/* Icone Font Awesome */
+.fa {
+    font-size: 20pt;    
+}
+
+.social-mobile, .language-mobile {
+    display: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-mobile .soundcloud {
+    background-color: #ff6600;
+}
+.social-mobile .facebook {
+    background-color: #3B5998;
+}
+
+.social-mobile i {
+    font-size: 48px;
+    color: #fffff0;
+}
 
 /* Dropdown */
 
@@ -84,78 +122,84 @@ body {
   background-color: transparent;
 }
 
-.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+.navbar-brand:hover,
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
   color: #fee250;
 }
 
 .navbar-custom button {
-  margin-right: 0;
+  margin: 0;
 }
 
 .navbar-custom button span {
   background-color: #feed96;
 }
 
-.navbar-custom button:hover span,
-.navbar-custom button:not(.collapsed) span {
-  background-color: #fee250;
+.navbar-custom button:hover, 
+.navbar-custom button:not(.collapsed)  {
+  color: #fee250;
 }
 
-/* CUSTOMIZE THE CAROUSEL
+/* CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
+/* Base class */
 .carousel {
-  height: 500px;
+  height: 200px;
   margin-top: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
-/* Since positioning the image, we need to help out the caption */
+/* Caption */
 .carousel-caption {
   z-index: 10;
 }
 
-/* Declare heights because of positioning of img element */
+/* Controlli */
+.carousel-control .fa {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    font-size: 24pt;
+}
+
+.left .fa {
+    left: 15%;
+}
+
+.right .fa {
+    right: 15%;
+}
+
+/* Elementi del carousel */s
+
 .carousel .item {
-  height: 500px;
   background-color: transparent;
-  overflow: hidden;
-}
-.carousel-inner > .item > img {
-  width: 100%;
-  height: auto;
 }
 
-/* Mobile */
-@media (max-width: 479px) {
-  .carousel, .carousel .item{
-    height: 250px;
-    min-height: 250px
-  }
+
+/* CONTENUTI
+-------------------------------------------------- */
+
+.inline {
+    display: inline;
 }
 
-@media (max-width: 767px) and (min-width: 480px) {
-  .carousel, .carousel .item {
-    height: 350px;
-    min-height: 350px
-  }
+.timestamp {
+    font-size: 14pt;
+    margin-left: 1em;
 }
 
- /*laptops */
-@media (max-width: 1023px) and (min-width: 768px) {
-  .carousel, .carousel .item {
-    height: 500px;
-    min-height: 500px;
-  }
+.elenco-news > h3 {
+    /*margin-top: 1.2em;*/
 }
 
-/* desktops */
-@media (min-width: 1024px) {
-  .carousel, .carousel .item {
-       height: 700px;
-       min-height: 700px;
-  }
-}
+
+
+
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -195,24 +239,13 @@ body {
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
-    /*margin-top: 20px;*/
+    margin-top: 20px;
   }
-  .navbar-wrapper .container {
-/*    padding-right: 15px;
-    padding-left: 15px;*/
+  .navbar-custom .container {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
   }
-  .navbar-wrapper .navbar {
-/*    padding-right: 0;
-    padding-left: 0;*/
-  }
-
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    /*border-radius: 4px;*/
-  }
-  .navbar-right {
-  margin-right: 10px;
-}
 
   /* Bump up size of carousel content */
   .carousel-caption p {
@@ -229,5 +262,56 @@ body {
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 479px) {
+  .carousel {
+    height: 200px;
+  }
+  .timestamp {
+    display: block;
+    margin: 0.5em 0 0.2em 0 ;
+  }
+}
+
+/* Tablet */
+@media (max-width: 767px) and (min-width: 480px) {
+  .carousel {
+    height: 300px;
+  }
+}
+
+/* In presenza del drawer */
+@media (max-width: 767px) {
+  .social-mobile, .language-mobile {
+    display: block;
+  }
+  #social, #language {
+    display: none;
+  }
+}
+
+ /*laptops */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .carousel {
+    height: 400px;
+    min-height: 400px;
+  }
+  .navbar-brand {
+    padding-left: 25px;
+  }
+}
+
+/* desktops */
+@media (min-width: 1024px) {
+  .carousel {
+       height: 400px;
+       min-height: 400px;
+  }
+  .navbar-brand {
+    padding-left: 25px;
   }
 }

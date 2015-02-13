@@ -1,9 +1,8 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 
 body {
-  transition: all 0.2s ease-in-out;
+  padding-top: 50px; /* Per la navbar */
   padding-bottom: 40px;
   color: #5a5a5a;
   background-color: #fffff0;
@@ -13,6 +12,9 @@ footer {
     margin-top: 30px;
 }
 
+.fa {
+    font-size:48pt;
+}
 
 /* NAVBAR
 -------------------------------------------------- */
@@ -41,9 +43,10 @@ footer {
   color: #feed96;
 }
 
-/* Link ai Social Network */
+/* Link ai Social Network e selezione linguaggio*/
 
-#social a {
+#social a, #social .fa {
+    font-size: 20pt; /* Icone Font Awesome */
     padding-left: 5px;
     padding-right: 5px;
     height: 50px;
@@ -57,14 +60,10 @@ footer {
     width: 50px;
 }
 
-/* Icone Font Awesome */
-.fa {
-    font-size: 20pt;    
-}
+/* Barra social per dispositivi mobile */
 
 .social-mobile, .language-mobile {
     display: none;
-    transition: all 0.2s ease-in-out;
 }
 
 .social-mobile .soundcloud {
@@ -77,6 +76,7 @@ footer {
 .social-mobile i {
     font-size: 48px;
     color: #fffff0;
+    width: 100%; /* rende cliccabile tutto il div contenitore */
 }
 
 /* Dropdown */
@@ -128,12 +128,16 @@ footer {
   color: #fee250;
 }
 
+/* Pulsante mobile */
+
 .navbar-custom button {
   margin: 0;
+  font-size: 20pt;
+  height: 50px;
 }
 
-.navbar-custom button span {
-  background-color: #feed96;
+.navbar-custom button i {
+  font-size: 20pt
 }
 
 .navbar-custom button:hover, 
@@ -147,7 +151,6 @@ footer {
 /* Base class */
 .carousel {
   height: 200px;
-  margin-top: 50px;
   margin-bottom: 20px;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
@@ -184,13 +187,17 @@ footer {
 /* CONTENUTI
 -------------------------------------------------- */
 
-.inline {
-    display: inline;
+.row:not(.social-mobile) {
+    margin: 1em 0;
+}
+
+.center {
+    text-align: center
 }
 
 .timestamp {
+    margin: -0.2em 0 0.5em 0;
     font-size: 14pt;
-    margin-left: 1em;
 }
 
 .elenco-news > h3 {
@@ -198,40 +205,24 @@ footer {
 }
 
 
-
-
-
-/* MARKETING CONTENT
+/* FORM
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
+form {
+    background-color: #feed96;
+    height: 50px;
 }
-.marketing h2 {
-  font-weight: normal;
+form > .form-group {
+    /* Centering verticale */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
-.marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
+.control-label { /* Per schermi xs */
+    padding-top: 5px; 
+    text-align: right;
 }
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -271,10 +262,6 @@ footer {
   .carousel {
     height: 200px;
   }
-  .timestamp {
-    display: block;
-    margin: 0.5em 0 0.2em 0 ;
-  }
 }
 
 /* Tablet */
@@ -291,6 +278,9 @@ footer {
   }
   #social, #language {
     display: none;
+  }
+  form {
+    height: 100px;
   }
 }
 

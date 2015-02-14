@@ -211,6 +211,7 @@ footer {
 form {
     background-color: #feed96;
     height: 50px;
+    padding: 0 5px;
 }
 form > .form-group {
     /* Centering verticale */
@@ -279,7 +280,7 @@ form > .form-group {
   #social, #language {
     display: none;
   }
-  form {
+  form.notizie {
     height: 100px;
   }
 }

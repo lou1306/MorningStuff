@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Sito web ufficiale della band Morning Stuff.
-    Notizie, prossimi concerti, informazioni utili.">
+    Musica, foto, video">
     <meta name="author" content="Morning Stuff">
     <link rel="icon" href="../img/favicon.png">
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
-    <title>Morning Stuff | Home</title>
+    <title>Morning Stuff | Media</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 
+    <!-- Bootstrap Toggle -->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -97,33 +99,20 @@
           </a>
         </div>
       </div>
-    </div>
-
-    <form class="form-horizontal">
-      <div class="form-group">
-        <div class="col-xs-12 col-sm-12 col-lg-4 col-lg-offset-4">
-                <label class="control-label col-xs-3 col-sm-2 col-lg-2 col-lg-offset-2" for="musica">
-          Musica
-        </label>
-        <div class="col-xs-1 checkbox">
-          <input type="checkbox" name="musica" value="musica">
-        </div>
-        <label class="control-label col-xs-3 col-sm-2 col-lg-2" for="foto">
-          Foto
-        </label>
-        <div class="col-xs-1 checkbox">
-          <input type="checkbox" name="foto" value="foto">
-        </div>
-        <label class="control-label col-xs-3 col-sm-1 col-lg-2" for="foto">
-          Video
-        </label>
-        <div class="col-xs-1 checkbox">
-          <input type="checkbox" name="foto" value="foto">
-        </div>
       </div>
-        </div>
-
-    </form>
+<form>
+    <div class="form-group center">
+    <label class="checkbox-inline">
+      <input type="checkbox" checked data-toggle="toggle" data-on="Musica" data-off="Musica">
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" checked data-toggle="toggle" data-on="Foto" data-off="Foto">
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" checked data-toggle="toggle" data-on="Video" data-off="Video"> 
+    </label>
+    </div>
+</form>
     <div class="container main">
     <h1 class="col-xs-12 col-sm-8 col-md-6 col-md-offset-1">Media</h1>
 
@@ -173,6 +162,7 @@
     <script src="../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
     <script>
     var myCarousel = $("#myCarousel")
     function calcMargin(imgHeight){
@@ -185,6 +175,7 @@
     })
 
     $(document).ready(function(){
+      $('.checkbox-inline input').bootstrapToggle();
       $('.has-tooltip').tooltip({
          animation: false 
       })

@@ -99,48 +99,42 @@
           </a>
         </div>
       </div>
-      </div>
-<form>
-    <div class="form-group center">
-    <label class="checkbox-inline">
-      <input type="checkbox" checked data-toggle="toggle" data-on="Musica" data-off="Musica">
-    </label>
-    <label class="checkbox-inline">
-      <input type="checkbox" checked data-toggle="toggle" data-on="Foto" data-off="Foto">
-    </label>
-    <label class="checkbox-inline">
-      <input type="checkbox" checked data-toggle="toggle" data-on="Video" data-off="Video"> 
-    </label>
     </div>
-</form>
-    <div class="container main">
-    <h1 class="col-xs-12 col-sm-8 col-md-6 col-md-offset-1">Media</h1>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-6 col-md-offset-1">
-        <h2 class=""><a href="http://www.google.com">Lorem Ipsum</a></h2>
-        <h3 class="timestamp text-muted">10 Febbraio 2015</h3>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <form>
+      <div class="form-group text-center">
+      <label class="checkbox-inline">
+        <input type="checkbox" checked data-toggle="toggle" data-on="Musica" data-off="Musica" name="Musica">
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" checked data-toggle="toggle" data-on="Foto" data-off="Foto" name="Foto">
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" checked data-toggle="toggle" data-on="Video" data-off="Video" name="video" > 
+      </label>
       </div>
-      <div class="hidden-xs col-sm-4 col-md-4">
-      <img class="featurette-image img-responsive" src="http://placehold.it/400x300" alt="Generic placeholder image">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
-        <h2 class=""><a href="http://www.google.com">Nullam id dolor</a></h2>
-        <h3 class="timestamp text-muted">8 Febbraio 2015</h3>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </form>
+
+    <div class="container-fluid main">
+      <h1 class="col-xs-12 col-sm-12 col-md-11 col-md-offset-1">Media</h1>
+      <div class="row masonry">
+        <div class="col-xs-12 masonry-element">
+          <img class="img-responsive" src="http://placehold.it/420x280" alt="Generic placeholder image">
+        </div>
+        <div class="col-xs-12 col-md-3 masonry-element">
+          <iframe height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189312478&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></div>
+        <div class="col-xs-12 col-md-6 masonry-element">
+          <img class="img-responsive" src="http://placehold.it/280x420" alt="Generic placeholder image">
+        </div>
+        <div class="col-xs-12 col-md-4 masonry-element">
+          <img class="img-responsive" src="http://placehold.it/420x280" alt="Generic placeholder image">
+        </div>
+        <div class="col-xs-12 col-md-3 masonry-element">
+          <iframe height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189312478&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe></div>
+        <div class="col-xs-12 col-md-6 masonry-element">
+          <img class="img-responsive" src="http://placehold.it/280x420" alt="Generic placeholder image">
+        </div>
+        
       </div>
     </div>
 
@@ -163,19 +157,23 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+    <script src="../assets/js/masonry.pkgd.min.js"></script>
+    <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
     <script>
     var myCarousel = $("#myCarousel")
     function calcMargin(imgHeight){
       height = myCarousel.height()
       return Math.round((height-imgHeight)/2)
     }
-    $(window).on('resize', function() {
-      img = $(".item.active img")
-      img.css("margin-top", calcMargin(img.height())+"px")
-    })
 
     $(document).ready(function(){
       $('.checkbox-inline input').bootstrapToggle();
+      var masonryContainer = $(".masonry")
+      masonryCOntainer.imagesLoaded( function() {
+        masonryContainer.masonry({
+          itemSelector: '.masonry-element'
+        })
+      });
       $('.has-tooltip').tooltip({
          animation: false 
       })

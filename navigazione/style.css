@@ -9,11 +9,18 @@ body {
 }
 
 footer {
-    margin-top: 30px;
+    margin: 30px 1em;
 }
 
 .fa {
     font-size:48pt;
+}
+
+.valign {
+    /* Centering verticale */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* NAVBAR
@@ -45,13 +52,13 @@ footer {
 
 /* Link ai Social Network e selezione linguaggio*/
 
-#social a, #social .fa {
-    font-size: 20pt; /* Icone Font Awesome */
+/*#social .fa {
+    font-size: 20pt; /* Icone Font Awesome 
     padding-left: 5px;
     padding-right: 5px;
     height: 50px;
 }
-
+*/
 #language, .social-mobile {
     text-align: center;
 }
@@ -132,12 +139,15 @@ footer {
 
 .navbar-custom button {
   margin: 0;
-  font-size: 20pt;
   height: 50px;
 }
 
-.navbar-custom button i {
-  font-size: 20pt
+.navbar-custom button i, #social i {
+  font-size: 20pt;
+}
+
+#social > li > a {
+    padding: 11px inherit;
 }
 
 .navbar-custom button:hover, 
@@ -190,10 +200,6 @@ footer {
     margin: 1em 0;
 }
 
-.center {
-    text-align: center
-}
-
 .timestamp {
     margin: -0.2em 0 0.5em 0;
     font-size: 14pt;
@@ -202,6 +208,8 @@ footer {
 .elenco-news > h3 {
     /*margin-top: 1.2em;*/
 }
+
+/* Centra le immagini su display ridotti */
 
 
 /* FORM
@@ -222,6 +230,17 @@ form > .form-group {
 .control-label { /* Per schermi xs */
     padding-top: 5px; 
     text-align: right;
+}
+
+/* MASONRY
+-------------------------------------------------- */
+
+.masonry .item {
+    width: 25%;
+}
+
+.masonry .item.w2 {
+    width: 50%;
 }
 
 /* RESPONSIVE CSS

@@ -151,7 +151,6 @@ footer {
 /* Base class */
 .carousel {
   height: 200px;
-  margin-bottom: 20px;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
 }
@@ -211,7 +210,7 @@ footer {
 form {
     background-color: #feed96;
     height: 50px;
-    padding: 0 5px;
+    padding-top: 0 5px;
 }
 form > .form-group {
     /* Centering verticale */

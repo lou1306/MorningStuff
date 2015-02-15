@@ -12,7 +12,7 @@ footer {
     margin: 30px 1em;
 }
 
-.fa {
+footer .fa {
     font-size:48pt;
 }
 
@@ -50,15 +50,9 @@ footer {
   color: #feed96;
 }
 
-/* Link ai Social Network e selezione linguaggio*/
+/* Selezione linguaggio */
 
-/*#social .fa {
-    font-size: 20pt; /* Icone Font Awesome 
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 50px;
-}
-*/
+
 #language {
     text-align: center;
 }
@@ -79,7 +73,7 @@ footer {
 .btn.facebook {
     background-color: #3B5998;
 }
-.social-mobile{
+.social-mobile {
     width: 100%;
     border-color: #5a5a5a
 }
@@ -146,7 +140,7 @@ footer {
   height: 50px;
 }
 
-.navbar-custom button i, #social i {
+.navbar-custom button i, #social i, .social-mobile i {
   font-size: 20pt;
 }
 
@@ -167,6 +161,9 @@ footer {
   height: 200px;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+}
+.carousel-inner {
+    height: 100%;
 }
 /* Caption */
 .carousel-caption {
@@ -193,38 +190,54 @@ footer {
 /* Elementi del carousel */
 .carousel .item {
   background-color: transparent;
+  white-space: nowrap;
+}
+/*.helper {
+    display: block;
+    height: 100%;
+    vertical-align: middle;
+}*/
+.item > img {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 
 /* CONTENUTI
 -------------------------------------------------- */
 
-/*.row:not(.social-mobile) {
-    margin: 1em 0;
-}
-*/
 
 .elenco > a:not(.ultima) {
-    overflow: auto;
+    overflow: auto; /* Per visualizzare correttamente i badge */
     font-weight: bold
 }
 
+.top-buffer {
+    margin-top: 1em;
+}
 
 /* FORM
 -------------------------------------------------- */
 
-form {
+.form-group {
     background-color: #feed96;
-    height: 50px;
-    padding-top: 0 5px;
+    padding-left: 1em;
+    padding-right: 1em;
 }
-form > .form-group {
-    /* Centering verticale */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 
+.form-group:before, .form-group:after {
+    padding: 3px 0;
 }
+
+.form-media {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.check {
+    margin: 0 10px;
+}
+
 .control-label { /* Per schermi xs */
     padding-top: 5px; 
     text-align: right;
@@ -233,8 +246,8 @@ form > .form-group {
 /* MASONRY
 -------------------------------------------------- */
 
-.masonry .item {
-    width: 25%;
+.masonry-element {
+    margin-bottom: 1em;
 }
 
 .masonry .item.w2 {
@@ -295,9 +308,6 @@ form > .form-group {
   }
   #social, #language {
     display: none;
-  }
-  form.notizie {
-    height: 100px;
   }
 }
 

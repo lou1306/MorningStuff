@@ -89,13 +89,14 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="../img/pbass.jpg" alt="Prima slide">
+          <span class="helper"></span>
+          <img src="../img/pbass.jpg" alt="Prima slide" class="img-responsive">
         </div>
         <div class="item">
-          <img src="../img/epi.jpg" alt="Seconda slide">
+          <img src="../img/epi.jpg" alt="Seconda slide" class="img-responsive">
         </div>
         <div class="item">
-          <img src="../img/mic.jpg" alt="Terza slide">
+          <img src="../img/mic.jpg" alt="Terza slide" class="img-responsive">
         </div>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -107,10 +108,6 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
-    <div class="container">
-    </div>
-
-
 
     <!-- PULSANTI SOCIAL per dispositivi <= 468px 
     ================================================== -->
@@ -125,6 +122,10 @@
         <span class="sr-only">Facebook</span>
       </a>
     </div>
+
+    <!-- CONTENUTI
+    ================================================== -->      
+
     <div class="container main">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 col-lg-offset-1">
@@ -176,28 +177,29 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script>
-    var myCarousel = $("#myCarousel")
-    function calcMargin(imgHeight){
-      height = myCarousel.height()
-      return Math.round((height-imgHeight)/2)
+    /* Centra verticalmente le img del carousel */
+    function setMargin(selector, delay){
+      setTimeout(function(){
+        var element = $(selector)
+        element.css(
+            { "top": 0,
+              "margin-top": ($("#myCarousel").height() - element.height())/2}
+          )}, delay)
     }
-    $(window).on('resize', function() {
-      img = $(".item.active img")
-      img.css("margin-top", calcMargin(img.height())+"px")
-    })
-
     $(document).ready(function(){
-      $('.has-tooltip').tooltip({
-         animation: false 
+      $("#myCarousel").on("slide.bs.carousel", function(){
+        setMargin(".item.next img, .item.prev img", 0)
+      })
+      /* 
+      Aumentiamo il delay per tenere conto di brusche variazioni nelle
+      dimensioni del viewport
+      */
+      $(window).on('resize orientationChanged', function() {
+        setMargin(".item.active img", 250)
       })
       $(window).trigger("resize")
-      myCarousel.on("slide.bs.carousel", function(){
-        setTimeout(function() {
-          img = $(".item.next img, .item.prev img")
-          img.css("margin-top", calcMargin(img.height())+"px")
-        }, 0)
-      })
     })
+    
     </script>
   </body>
 </html>

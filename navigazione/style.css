@@ -192,11 +192,7 @@ footer .fa {
   background-color: transparent;
   white-space: nowrap;
 }
-/*.helper {
-    display: block;
-    height: 100%;
-    vertical-align: middle;
-}*/
+
 .item > img {
     display: inline-block;
     vertical-align: middle;
@@ -291,6 +287,10 @@ footer .fa {
 @media (max-width: 479px) {
   .carousel {
     height: 200px;
+  }
+  small {
+    display: block;
+    margin-top: 0.2em;
   }
 }
 

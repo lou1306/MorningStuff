@@ -126,12 +126,10 @@
             <h1>Notizie</h1>
           </div>
 
-
-
           <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-6 col-md-offset-1">
-              <h2 class=""><a href="#notizia1">Lorem Ipsum</a></h2>
-              <h3 class="timestamp text-muted">10 Febbraio 2015</h3>
+            <h2><a href="#notizia1">Lorem Ipsum</a> <small>10 Febbraio 2015</small></h2>
+              <!--<h3 class="timestamp text-muted">10 Febbraio 2015</h3>-->
               <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -145,8 +143,7 @@
             </div>
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
-                <h2 class=""><a href="http://www.google.com">Nullam id dolor</a></h2>
-                <h3 class="timestamp text-muted">8 Febbraio 2015</h3>
+                <h2><a href="http://www.google.com">Nullam id dolor</a> <small>8 Febbraio 2015</small></h2>
                 <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -175,26 +172,9 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script>
-      var myCarousel = $("#myCarousel")
-      function calcMargin(imgHeight){
-        height = myCarousel.height()
-        return Math.round((height-imgHeight)/2)
-      }
-      $(window).on('resize', function() {
-        img = $(".item.active img")
-        img.css("margin-top", calcMargin(img.height())+"px")
-      })
-
       $(document).ready(function(){
         $('.has-tooltip').tooltip({
-         animation: false 
-       })
-        $(window).trigger("resize")
-        myCarousel.on("slide.bs.carousel", function(){
-          setTimeout(function() {
-            img = $(".item.next img, .item.prev img")
-            img.css("margin-top", calcMargin(img.height())+"px")
-          }, 0)
+          animation: false 
         })
       })
     </script>

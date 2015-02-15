@@ -59,7 +59,7 @@ footer {
     height: 50px;
 }
 */
-#language, .social-mobile {
+#language {
     text-align: center;
 }
 
@@ -73,17 +73,21 @@ footer {
     display: none;
 }
 
-.social-mobile .soundcloud {
+.btn.soundcloud {
     background-color: #ff6600;
 }
-.social-mobile .facebook {
+.btn.facebook {
     background-color: #3B5998;
 }
-
-.social-mobile i {
-    font-size: 48px;
+.social-mobile{
+    width: 100%;
+    border-color: #5a5a5a
+}
+.social-mobile .btn {
+    padding-left: 0;
+    padding-right: 0;
     color: #fffff0;
-    width: 100%; /* rende cliccabile tutto il div contenitore */
+    width: 50%;
 }
 
 /* Dropdown */
@@ -195,10 +199,10 @@ footer {
 /* CONTENUTI
 -------------------------------------------------- */
 
-.row:not(.social-mobile) {
+/*.row:not(.social-mobile) {
     margin: 1em 0;
 }
-
+*/
 
 .elenco > a:not(.ultima) {
     overflow: auto;

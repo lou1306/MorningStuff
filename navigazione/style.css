@@ -186,8 +186,7 @@ footer {
     right: 15%;
 }
 
-/* Elementi del carousel */s
-
+/* Elementi del carousel */
 .carousel .item {
   background-color: transparent;
 }
@@ -200,16 +199,11 @@ footer {
     margin: 1em 0;
 }
 
-.timestamp {
-    margin: -0.2em 0 0.5em 0;
-    font-size: 14pt;
-}
 
-.elenco-news > h3 {
-    /*margin-top: 1.2em;*/
+.elenco > a:not(.ultima) {
+    overflow: auto;
+    font-weight: bold
 }
-
-/* Centra le immagini su display ridotti */
 
 
 /* FORM

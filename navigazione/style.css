@@ -209,8 +209,24 @@ footer .fa {
     margin-top: 1em;
 }
 
+h3.share :hover {
+    text-decoration: none
+}
 
-/* MENU SECONDARI (notizie, media)
+h3.share > .facebook {
+    color: #3B5998;
+}
+
+h3.share > .twitter {
+    color: #55acee;
+}
+
+h3.share > .google-plus {
+    color: #d34836;
+}
+
+
+/* MENU SECONDARI (notizie, media) e BREADCRUMBS
 -------------------------------------------------- */
 
 .secondary-menu {
@@ -227,6 +243,10 @@ label
     display: inline;
     width: auto;
     padding: 6px 5px;
+}
+
+.breadcrumb {
+    background-color: #feed96;
 }
 
 /* MASONRY

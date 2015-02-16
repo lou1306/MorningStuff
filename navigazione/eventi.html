@@ -88,30 +88,11 @@
         </div>
 
         <nav class="secondary-menu">
-          <form class="form-inline">
-            <label class="control-label" for="anno">Anno</label>
-            <select class="form-control" id="anno" name="anno">
-              <option value="2015">2015</option>
-              <option value="2015">2014</option>
-            </select>
+          <div class="btn-group" role="group">
+            <a class="btn btn-primary" href="#">Prossimi eventi</a>
+            <a class="btn btn-default" href="./eventipassati.html">Eventi passati</a>
           </div>
-          <label class="control-label" for="mese">Mese</label>
-          <select class="form-control" id="mese" name="mese">
-            <option value="2015">Gennaio</option>
-            <option value="2015">Febbraio</option>
-            <option value="2015">Marzo</option>
-            <option value="2015">Aprile</option>
-            <option value="2015">Maggio</option>
-            <option value="2015">Giugno</option>
-            <option value="2015">Luglio</option>
-            <option value="2015">Agosto</option>
-            <option value="2015">Settembre</option>
-            <option value="2015">Ottobre</option>
-            <option value="2015">Novembre</option>
-            <option value="2015">Dicembre</option>
-          </select>
-        </form>
-      </nav>
+        </nav>
 
       <div class="container main">
 
@@ -144,17 +125,35 @@
                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
-            </div>
+              <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+              <h2><a href="http://www.google.com">Pub Le Chat Noir</a> <small>22 Febbraio 2015, 22.00</small></h2>
+                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+                  <h2><a href="http://www.google.com">Bar del Corso</a> <small>23 Febbraio 2015, 22.30</small></h2>
+                  <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
 
 
-            <!-- FOOTER -->
-            <footer>
-              <p class="pull-right"><a href="#"><i class="fa fa-arrow-circle-up"></i></a></p>
-              <p>&copy; 2015 Morning Stuff. Design: Luca Di Stefano</p>
-              <p>Realizzato con <a href="http://getbootstrap.com">Bootstrap</a></p>
-            </footer>
+                <!-- FOOTER -->
+                <footer>
+                  <p class="pull-right"><a href="#"><i class="fa fa-arrow-circle-up"></i></a></p>
+                  <p>&copy; 2015 Morning Stuff. Design: Luca Di Stefano</p>
+                  <p>Realizzato con <a href="http://getbootstrap.com">Bootstrap</a></p>
+                </footer>
 
-          </div><!-- /.container -->
+              </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -165,6 +164,7 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script>
+      /* Inizializza i tooltip Bootstrap */
       $(document).ready(function(){
         $('.has-tooltip').tooltip({
           animation: false 

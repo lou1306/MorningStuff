@@ -184,6 +184,10 @@ h3.share > .twitter {
 h3.share > .google-plus {
     color: #d34836;
 }
+
+iframe {
+    border: none;
+}
 /* MENU SECONDARI (notizie, media) e BREADCRUMBS
 -------------------------------------------------- */
 

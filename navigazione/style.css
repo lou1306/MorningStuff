@@ -52,12 +52,8 @@ footer .fa {
 
 /* Selezione linguaggio */
 
-
-#language {
-    text-align: center;
-}
-
 #language > li{
+    text-align: center;
     width: 50px;
 }
 
@@ -80,6 +76,7 @@ footer .fa {
 .social-mobile .btn {
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 6px;
     color: #fffff0;
     width: 50%;
 }
@@ -208,46 +205,63 @@ footer .fa {
     font-weight: bold
 }
 
-.top-buffer {
+.top-buffer, .embed-responsive {
     margin-top: 1em;
 }
 
-/* FORM
+
+/* MENU SECONDARI (notizie, media)
 -------------------------------------------------- */
 
-.form-group {
+.secondary-menu {
     background-color: #feed96;
+    text-align: center;
+    padding: 6px;
     padding-left: 1em;
     padding-right: 1em;
 }
 
-.form-group:before, .form-group:after {
-    padding: 3px 0;
-}
-
-.form-media {
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
-.check {
-    margin: 0 10px;
-}
-
-.control-label { /* Per schermi xs */
-    padding-top: 5px; 
-    text-align: right;
+.form-control,
+label
+ {
+    display: inline;
+    width: auto;
+    padding: 6px 5px;
 }
 
 /* MASONRY
 -------------------------------------------------- */
 
-.masonry-element {
-    margin-bottom: 1em;
+.masonry-element > img {
+    width: 100%;
 }
 
-.masonry .item.w2 {
-    width: 50%;
+/* Mobile */
+@media (max-width: 479px) {
+  .masonry-element {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 767px) and (min-width: 480px) {
+ .masonry-element {
+    max-width: 40%;
+  }
+}
+
+ /*laptops */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .masonry-element {
+    max-width: 35%;
+  }
+}
+
+/* desktops */
+@media (min-width: 1024px) {
+  .masonry-element {
+    max-width: 20%;
+  }
 }
 
 /* RESPONSIVE CSS
@@ -308,6 +322,9 @@ footer .fa {
   }
   #social, #language {
     display: none;
+  }
+  .masonry {
+    width: 80%;
   }
 }
 

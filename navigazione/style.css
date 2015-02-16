@@ -113,7 +113,8 @@ footer .fa {
     font-size: 20pt;
 }
 #social > li > a {
-    padding: 11px inherit;
+    padding-top: 11px;
+    padding-bottom: 11px;
 }
 .navbar-custom button:hover, .navbar-custom button:not(.collapsed) {
     color: #fee250;

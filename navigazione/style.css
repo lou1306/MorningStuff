@@ -2,60 +2,52 @@
 -------------------------------------------------- */
 
 body {
-  padding-top: 50px; /* Per la navbar */
-  padding-bottom: 40px;
-  color: #5a5a5a;
-  background-color: #fffff0;
+    padding-top: 50px;
+    /* Per la navbar */
+    
+    padding-bottom: 40px;
+    color: #5a5a5a;
+    background-color: #fffff0;
 }
-
 footer {
     margin: 30px 1em;
 }
-
 footer .fa {
-    font-size:48pt;
+    font-size: 48pt;
 }
-
 /* NAVBAR
 -------------------------------------------------- */
-
-
 /* Proprietà globali della Navbar */
 
 .navbar-custom {
-  background-color: #222;
-  border-color: #101010;
-  margin-bottom: 0;
-  border: 0;
-  color: #feed96;
+    background-color: #222;
+    border-color: #101010;
+    margin-bottom: 0;
+    border: 0;
+    color: #feed96;
 }
-
 .navbar-nav >li >a {
     padding-left: 10px;
     padding-right: 10px;
 }
-
 /* Brand */
 
 .navbar-brand {
-  font-family: 'Pacifico', cursive;
-  font-size: 2em;
-  color: #feed96;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    color: #feed96;
 }
-
 /* Selezione linguaggio */
 
-#language > li{
+#language > li {
     text-align: center;
     width: 50px;
 }
-
 /* Barra social per dispositivi mobile */
 
 .social-mobile, .language-mobile {
     display: none;
 }
-
 .btn.soundcloud {
     background-color: #ff6600;
 }
@@ -73,94 +65,78 @@ footer .fa {
     color: #fffff0;
     width: 50%;
 }
-
 /* Dropdown */
 
 .dropdown-menu-inverse {
-  background-color: #222;
-  background-clip: padding-box;
-  border: 1px solid #101010;
-  border-radius: 4px;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
+    background-color: #222;
+    background-clip: padding-box;
+    border: 1px solid #101010;
+    border-radius: 4px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
 }
 .dropdown-menu-inverse .divider {
-  background-color: rgba(255,255,255,0.1)
+    background-color: rgba(255, 255, 255, 0.1)
 }
 .dropdown-menu-inverse .dropdown-header {
-  color: #c93c18;
-  font-size: 1em;
-  font-weight: bold;
+    color: #c93c18;
+    font-size: 1em;
+    font-weight: bold;
 }
 .dropdown-menu-inverse > li > a {
-  color: #feed96
+    color: #feed96
 }
-.dropdown-menu-inverse > li > a:hover,
-.dropdown-menu-inverse > li > a:active
- {
-  color: #fee250;
-  background-color: transparent;
+.dropdown-menu-inverse > li > a:hover, .dropdown-menu-inverse > li > a:active {
+    color: #fee250;
+    background-color: transparent;
 }
-
 /* Collegamenti */
 
-.navbar-custom .navbar-nav > .active > a, 
-.navbar-custom .navbar-nav > .active > a:hover, 
-.navbar-custom .navbar-nav > .active > a:focus,
-.navbar-custom .navbar-nav > .open > a:focus {
-  color: #fee250;
-  background-color: #c93c18;
+.navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > .active > a:focus, .navbar-custom .navbar-nav > .open > a:focus {
+    color: #fee250;
+    background-color: #c93c18;
 }
-
 .navbar-custom .navbar-nav > li > a {
-  font-weight: bold;
-  color: #feed96;
-  background-color: transparent;
+    font-weight: bold;
+    color: #feed96;
+    background-color: transparent;
 }
-
-.navbar-brand:hover,
-.navbar-custom .navbar-nav > li > a:hover,
-.navbar-custom .navbar-nav > li > a:focus {
-  color: #fee250;
+.navbar-brand:hover, .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+    color: #fee250;
 }
-
 /* Pulsante mobile */
 
 .navbar-custom button {
-  margin: 0;
-  height: 50px;
+    margin: 0;
+    height: 50px;
 }
-
 .navbar-custom button i, #social i, .social-mobile i {
-  font-size: 20pt;
+    font-size: 20pt;
 }
-
 #social > li > a {
     padding: 11px inherit;
 }
-
-.navbar-custom button:hover, 
-.navbar-custom button:not(.collapsed)  {
-  color: #fee250;
+.navbar-custom button:hover, .navbar-custom button:not(.collapsed) {
+    color: #fee250;
 }
-
 /* CAROUSEL
 -------------------------------------------------- */
-
 /* Base class */
+
 .carousel {
-  height: 200px;
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
+    height: 200px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
 }
 .carousel-inner {
     height: 100%;
 }
 /* Caption */
-.carousel-caption {
-  z-index: 10;
-}
 
+.carousel-caption {
+    z-index: 10;
+}
 /* Controlli */
+
 .carousel-control .fa {
     position: absolute;
     top: 50%;
@@ -168,57 +144,46 @@ footer .fa {
     display: inline-block;
     font-size: 24pt;
 }
-
 .left .fa {
     left: 15%;
 }
-
 .right .fa {
     right: 15%;
 }
-
 /* Elementi del carousel */
-.carousel .item {
-  background-color: transparent;
-  white-space: nowrap;
-}
 
+.carousel .item {
+    background-color: transparent;
+    white-space: nowrap;
+}
 .item > img {
     display: inline-block;
     vertical-align: middle;
 }
-
-
 /* CONTENUTI
 -------------------------------------------------- */
 
-
 .elenco > a:not(.ultima) {
-    overflow: auto; /* Per visualizzare correttamente i badge */
+    overflow: auto;
+    /* Per visualizzare correttamente i badge */
+    
     font-weight: bold
 }
-
 .top-buffer, .embed-responsive {
     margin-top: 1em;
 }
-
-h3.share :hover {
+h3.share:hover {
     text-decoration: none
 }
-
 h3.share > .facebook {
     color: #3B5998;
 }
-
 h3.share > .twitter {
     color: #55acee;
 }
-
 h3.share > .google-plus {
     color: #d34836;
 }
-
-
 /* MENU SECONDARI (notizie, media) e BREADCRUMBS
 -------------------------------------------------- */
 
@@ -229,19 +194,14 @@ h3.share > .google-plus {
     padding-left: 1em;
     padding-right: 1em;
 }
-
-.form-control,
-label
- {
+.form-control, label {
     display: inline;
     width: auto;
     padding: 6px 5px;
 }
-
 .breadcrumb {
     background-color: #feed96;
 }
-
 /* MASONRY
 -------------------------------------------------- */
 
@@ -250,93 +210,89 @@ label
     margin: 1px 0;
     float: left;
 }
-
 .masonry-element > img {
     width: 100%;
 }
-
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
-  .navbar-custom .container {
-    width: 100%;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
-
-  .featurette-heading {
-    font-size: 50px;
-  }
+    /* Navbar positioning foo */
+    
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-custom .container {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    /* Bump up size of carousel content */
+    
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+    .featurette-heading {
+        font-size: 50px;
+    }
 }
-
 @media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
+    .featurette-heading {
+        margin-top: 120px;
+    }
 }
-
-
 /* Mobile */
+
 @media (max-width: 479px) {
-  .carousel {
-    height: 200px;
-  }
-  small {
-    display: block;
-    margin-top: 0.2em;
-  }
+    .carousel {
+        height: 200px;
+    }
+    small {
+        display: block;
+        margin-top: 0.2em;
+    }
 }
-
 /* Tablet */
+
 @media (max-width: 767px) and (min-width: 480px) {
-  .carousel {
-    height: 300px;
-  }
+    .carousel {
+        height: 300px;
+    }
 }
-
 /* In presenza del drawer */
+
 @media (max-width: 767px) {
-  .social-mobile, .language-mobile {
-    display: block;
-  }
-  #social, #language {
-    display: none;
-  }
-  .masonry {
-    width: 80%;
-  }
+    .social-mobile, .language-mobile {
+        display: block;
+    }
+    #social, #language {
+        display: none;
+    }
+    .masonry {
+        width: 80%;
+    }
 }
+/*laptops */
 
- /*laptops */
 @media (max-width: 1023px) and (min-width: 768px) {
-  .carousel {
-    height: 400px;
-    min-height: 400px;
-  }
-  .navbar-brand {
-    padding-left: 25px;
-  }
+    .carousel {
+        height: 400px;
+        min-height: 400px;
+    }
+    .navbar-brand {
+        padding-left: 25px;
+    }
 }
-
 /* desktops */
+
 @media (min-width: 1024px) {
-  .carousel {
-       height: 400px;
-       min-height: 400px;
-  }
-  .navbar-brand {
-    padding-left: 25px;
-  }
+    .carousel {
+        height: 400px;
+        min-height: 400px;
+    }
+    .navbar-brand {
+        padding-left: 25px;
+    }
 }

@@ -252,36 +252,14 @@ label
 /* MASONRY
 -------------------------------------------------- */
 
+.masonry-element {
+    width: 280px;
+    margin: 1px 0;
+    float: left;
+}
+
 .masonry-element > img {
     width: 100%;
-}
-
-/* Mobile */
-@media (max-width: 479px) {
-  .masonry-element {
-    width: 100%;
-  }
-}
-
-/* Tablet */
-@media (max-width: 767px) and (min-width: 480px) {
- .masonry-element {
-    max-width: 40%;
-  }
-}
-
- /*laptops */
-@media (max-width: 1023px) and (min-width: 768px) {
-  .masonry-element {
-    max-width: 35%;
-  }
-}
-
-/* desktops */
-@media (min-width: 1024px) {
-  .masonry-element {
-    max-width: 20%;
-  }
 }
 
 /* RESPONSIVE CSS

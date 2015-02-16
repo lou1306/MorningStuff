@@ -101,7 +101,7 @@
           <div class="page-header">
             <h1>Media &middot; Foto</h1>
           </div>
-          <div class="masonry">
+          <div id="masonry">
             <div class="masonry-element" data-date="2015-02-16">
               <img class="" src="http://dummyimage.com/520x280/f00" alt="Generic placeholder image">
             </div>
@@ -138,13 +138,6 @@
             <div class="masonry-element" data-date="2015-01-18">
               <img class="" src="http://dummyimage.com/280x420/ff0" alt="Generic placeholder image">
             </div>
-<!--            <div class="video" data-date="2015-02-09">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allowfullscreen>
-              </iframe>
-            </div>-->
-            <!--<div class="masonry-element audio" data-date="2015-01-15">
-              <iframe scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189312478&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-            </div>-->
           </div>
         </div>
 
@@ -172,7 +165,7 @@
         $('.has-tooltip').tooltip({
           animation: false 
         });
-        $masonryContainer = $(".masonry")
+        $masonryContainer = $("#masonry")
         $masonryContainer.imagesLoaded(function(){
           $masonryContainer.isotope({
             getSortData: {
@@ -182,7 +175,9 @@
             sortAscending: false,
             itemSelector: '.masonry-element',
             masonry: {
-              columnWidth: 300
+              gutter: 2,
+              columnWidth: 280,
+              isFitWidth: true
             }
           });
         });

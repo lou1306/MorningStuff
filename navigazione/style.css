@@ -204,6 +204,8 @@ iframe {
     padding: 6px 5px;
 }
 .breadcrumb {
+    padding-top: 13px;
+    padding-bottom: 13px;
     background-color: #feed96;
 }
 /* MASONRY

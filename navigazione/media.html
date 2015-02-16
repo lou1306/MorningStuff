@@ -160,28 +160,7 @@
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="../assets/js/isotope.pkgd.min.js"></script>
     <script src="../assets/js/imagesloaded.pkgd.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.has-tooltip').tooltip({
-          animation: false 
-        });
-        $masonryContainer = $("#masonry")
-        $masonryContainer.imagesLoaded(function(){
-          $masonryContainer.isotope({
-            getSortData: {
-              date: "[data-date]"
-            },
-            sortBy: "date",
-            sortAscending: false,
-            itemSelector: '.masonry-element',
-            masonry: {
-              gutter: 2,
-              columnWidth: 280,
-              isFitWidth: true
-            }
-          });
-        });
-      });
-    </script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/loadmasonry.js"></script>
   </body>
   </html>

@@ -133,7 +133,7 @@
             <h1>Ultime Notizie</h1>
           </div>
           <ul class="list-group elenco">
-            <a href="#" class="list-group-item list-group-item-info">
+            <a href="./notizia.html" class="list-group-item list-group-item-info">
               <span class="badge">10 Febbraio 2015</span>
               <h2 class="list-group-item-heading">Lorem Ipsum</h2>
               <p class="list-group-item-text">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>  
@@ -147,7 +147,7 @@
             <h1>Prossimi eventi</h1>
           </div>
           <ul class="list-group elenco">
-            <a href="#" class="list-group-item list-group-item-info">
+            <a href="./evento.html" class="list-group-item list-group-item-info">
               <span class="badge">13 Febbraio, 22.30</span>
               <h2 class="list-group-item-heading">La Pinacoteca</h2>
               <p class="list-group-item-text">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>  
@@ -176,30 +176,7 @@
     <script src="../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script>
-      /* Centra verticalmente le img del carousel */
-      function setMargin(selector, delay){
-        setTimeout(function(){
-          var element = $(selector)
-          element.css(
-            { "top": 0,
-            "margin-top": ($("#myCarousel").height() - element.height())/2}
-            )}, delay)
-      }
-      $(document).ready(function(){
-        $("#myCarousel").on("slide.bs.carousel", function(){
-          setMargin(".item.next img, .item.prev img", 0)
-        })
-      /* 
-      Aumentiamo il delay per tenere conto di brusche variazioni nelle
-      dimensioni del viewport
-      */
-      $(window).on('resize orientationChanged', function() {
-        setMargin(".item.active img", 250)
-      })
-      setMargin(".item.active img", 0)
-    })
-      
-  </script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/carouselvalign.js"></script>
 </body>
 </html>

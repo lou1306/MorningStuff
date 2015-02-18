@@ -43,6 +43,7 @@ footer .fa {
     text-align: center;
     width: 50px;
 }
+
 /* Barra social per dispositivi mobile */
 
 .social-mobile, .language-mobile {
@@ -77,7 +78,8 @@ footer .fa {
 .dropdown-menu-inverse .divider {
     background-color: rgba(255, 255, 255, 0.1)
 }
-.dropdown-menu-inverse .dropdown-header {
+.dropdown-menu-inverse .dropdown-header, 
+#language_header {
     color: #c93c18;
     font-size: 1em;
     font-weight: bold;
@@ -100,7 +102,7 @@ footer .fa {
     color: #feed96;
     background-color: transparent;
 }
-.navbar-brand:hover, .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+.navbar-brand:hover, .navbar-custom .navbar-nav > li:not(.language-header) > a:hover, .navbar-custom .navbar-nav > li > a:focus {
     color: #fee250;
 }
 /* Pulsante mobile */

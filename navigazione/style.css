@@ -160,8 +160,7 @@ footer .fa {
     white-space: nowrap;
 }
 .item > img {
-    display: inline-block;
-    vertical-align: middle;
+    transition: all 0.1s ease-in-out;
 }
 /* CONTENUTI
 -------------------------------------------------- */

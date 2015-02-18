@@ -8,8 +8,13 @@ function setMargin(selector, delay){
       )}, delay)
 }
 $(document).ready(function(){
+  
   $("#myCarousel").on("slide.bs.carousel", function(){
     setMargin(".item.next img, .item.prev img", 0)
+  })
+  /* Aspettiamo il caricamento delle immagini prima di posizionare la prima */
+  $(document).imagesLoaded(function(){
+    setMargin(".item.active img", 0)
   })
   /* 
   Aumentiamo il delay per tenere conto di brusche variazioni nelle
@@ -18,5 +23,4 @@ $(document).ready(function(){
   $(window).on('resize orientationChanged', function() {
     setMargin(".item.active img", 250)
   })
-  setMargin(".item.active img", 0)
 })

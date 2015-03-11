@@ -20,9 +20,13 @@ $(document).ready(function(){
   // (ci troviamo ad un offset superiore all'altezza del document).
   // Questa funzione riporta l'utente a inizio pagina.
   $(window).resize(function(){
-    if ($(document).scrollTop() > $(document).height())
-      $('html, body').animate({
-        scrollTop: 0
-    }, 2000);
+    console.log(($(window).scrollTop() + $(window).height()) > $(document).height());
+    setTimeout(function(){
+      console.log(($(window).scrollTop() + $(window).height()) > $(document).height());
+      if (($(window).scrollTop() + $(window).height()) > $(document).height()) {
+        $(window).scrollTop(0);
+        console.log("done");
+      }
+    }, 300);
   });
 });

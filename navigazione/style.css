@@ -215,6 +215,10 @@ iframe {
 /* MASONRY
 -------------------------------------------------- */
 
+#masonry {
+    margin: 0 auto;
+}
+
 .masonry-element {
     width: 280px;
     margin: 1px 0;

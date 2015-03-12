@@ -219,6 +219,7 @@ iframe {
     margin: 0 auto;
 }
 
+
 .masonry-element {
     width: 280px;
     margin: 1px 0;
@@ -257,6 +258,9 @@ iframe {
     }
     .masonry {
         width: 80%;
+    }
+    .page-header, .page-header.text-right{
+        text-align: center
     }
 }
 

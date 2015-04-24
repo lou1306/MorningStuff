@@ -9,9 +9,11 @@ body {
     color: #5a5a5a;
     background-color: #fffff0;
 }
+
 footer {
     margin: 30px 1em;
 }
+
 footer .fa {
     font-size: 48pt;
 }
@@ -26,6 +28,7 @@ footer .fa {
     border: 0;
     color: #feed96;
 }
+
 .navbar-nav >li >a {
     padding-left: 10px;
     padding-right: 10px;
@@ -43,22 +46,26 @@ footer .fa {
     text-align: center;
     width: 50px;
 }
-
 /* Barra social per dispositivi mobile */
 
-.social-mobile, .language-mobile {
+.social-mobile,
+.language-mobile {
     display: none;
 }
+
 .btn.soundcloud {
     background-color: #ff6600;
 }
+
 .btn.facebook {
     background-color: #3B5998;
 }
+
 .social-mobile {
     width: 100%;
     border-color: #5a5a5a
 }
+
 .social-mobile .btn {
     padding-left: 0;
     padding-right: 0;
@@ -75,34 +82,46 @@ footer .fa {
     border-radius: 4px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.176);
 }
+
 .dropdown-menu-inverse .divider {
     background-color: rgba(255, 255, 255, 0.1)
 }
-.dropdown-menu-inverse .dropdown-header, 
+
+.dropdown-menu-inverse .dropdown-header,
 #language_header {
     color: #c93c18;
     font-size: 1em;
     font-weight: bold;
 }
+
 .dropdown-menu-inverse > li > a {
     color: #feed96
 }
-.dropdown-menu-inverse > li > a:hover, .dropdown-menu-inverse > li > a:active {
+
+.dropdown-menu-inverse > li > a:hover,
+.dropdown-menu-inverse > li > a:active {
     color: #fee250;
     background-color: transparent;
 }
 /* Collegamenti */
 
-.navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > .active > a:focus, .navbar-custom .navbar-nav > .open > a:focus {
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open > a:focus {
     color: #fee250;
     background-color: #c93c18;
 }
+
 .navbar-custom .navbar-nav > li > a {
     font-weight: bold;
     color: #feed96;
     background-color: transparent;
 }
-.navbar-brand:hover, .navbar-custom .navbar-nav > li:not(.language-header) > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+
+.navbar-brand:hover,
+.navbar-custom .navbar-nav > li:not(.language-header) > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
     color: #fee250;
 }
 /* Pulsante mobile */
@@ -111,17 +130,22 @@ footer .fa {
     margin: 0;
     height: 50px;
 }
-.navbar-custom button i, #social i, .social-mobile i {
+
+.navbar-custom button i,
+#social i,
+.social-mobile i {
     font-size: 20pt;
 }
+
 #social > li > a {
     padding-top: 11px;
     padding-bottom: 11px;
 }
-.navbar-custom button:hover, .navbar-custom button:not(.collapsed) {
+
+.navbar-custom button:hover,
+.navbar-custom button:not(.collapsed) {
     color: #fee250;
 }
-
 /* CAROUSEL
 -------------------------------------------------- */
 /* Base class */
@@ -131,6 +155,7 @@ footer .fa {
     overflow: hidden;
     transition: all 0.2s ease-in-out;
 }
+
 .carousel-inner {
     height: 100%;
 }
@@ -148,9 +173,11 @@ footer .fa {
     display: inline-block;
     font-size: 24pt;
 }
+
 .left .fa {
     left: 15%;
 }
+
 .right .fa {
     right: 15%;
 }
@@ -160,6 +187,7 @@ footer .fa {
     background-color: transparent;
     white-space: nowrap;
 }
+
 .item > img {
     width: 100%;
     transition: all 0.1s ease-in-out;
@@ -173,18 +201,24 @@ footer .fa {
     
     font-weight: bold
 }
-.top-buffer, .embed-responsive {
+
+.top-buffer,
+.embed-responsive {
     margin-top: 1em;
 }
+
 h3.share:hover {
     text-decoration: none
 }
+
 h3.share > .facebook {
     color: #3B5998;
 }
+
 h3.share > .twitter {
     color: #55acee;
 }
+
 h3.share > .google-plus {
     color: #d34836;
 }
@@ -194,18 +228,16 @@ iframe {
 }
 
 .row.featured {
-    background-color: rgb(235, 235,235);
+    background-color: rgb(235, 235, 235);
     border-radius: 6px;
     padding-bottom: 2em;
 }
 
 .column-text {
     -webkit-columns: 2 250px;
-       -moz-columns: 2 250px;
-            columns: 2 250px;
+    -moz-columns: 2 250px;
+    columns: 2 250px;
 }
-
-
 /* MENU SECONDARI (notizie, media) e BREADCRUMBS
 -------------------------------------------------- */
 
@@ -214,11 +246,14 @@ iframe {
     text-align: center;
     padding: 6px;
 }
-.form-control, label {
+
+.form-control,
+label {
     display: inline;
     width: auto;
     padding: 6px 1px;
 }
+
 .breadcrumb {
     padding-top: 13px;
     padding-bottom: 13px;
@@ -236,12 +271,12 @@ iframe {
     margin: 1px 0;
     float: left;
 }
+
 .masonry-element > img {
     width: 100%;
 }
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
 /* Extra-Small */
 
 @media (max-width: 479px) {
@@ -261,10 +296,12 @@ iframe {
 }
 
 @media (max-width: 767px) {
-    .social-mobile, .language-mobile {
+    .social-mobile,
+    .language-mobile {
         display: block;
     }
-    #social, #language {
+    #social,
+    #language {
         display: none;
     }
     .masonry {
@@ -276,24 +313,24 @@ iframe {
 }
 
 @media (min-width: 768px) {
-    
     /* Espande la navbar a larghezza schermo */
+    
     .navbar-custom .container {
         width: 100%;
         padding-right: 5px;
         padding-left: 5px;
     }
-        .navbar-brand {
+    .navbar-brand {
         padding-left: 25px;
     }
     /* Bump up size of carousel content */
+    
     .carousel-caption p {
         margin-bottom: 20px;
         font-size: 21px;
         line-height: 1.4;
     }
 }
-
 /* Small (Tablet) */
 
 @media (max-width: 991px) and (min-width: 768px) {
@@ -302,7 +339,6 @@ iframe {
         min-height: 350px;
     }
 }
-
 /* Medium (Laptops) */
 
 @media (max-width: 1199px) and (min-width: 992px) {
@@ -311,7 +347,6 @@ iframe {
         min-height: 400px;
     }
 }
-
 /* Large (Desktops) */
 
 @media (max-width: 1919px) and (min-width: 1200px) {
@@ -320,10 +355,9 @@ iframe {
         min-height: 450px;
     }
 }
-
 /* Full HD */
 
-@media (min-width: 1920px){
+@media (min-width: 1920px) {
     .carousel {
         height: 600px;
         min-height: 400px;

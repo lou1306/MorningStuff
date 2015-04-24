@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$(document).ready(function() {
     /* Ridimensionamento degli iframe */
-    $(window).on("resize", function(){
-        $("iframe").width($("iframe").parent().width())
+    $(window).on("resize", function() {
+        $("iframe").width($("iframe").parent().width());
     })
-    $(window).resize()
-})
+    $(window).resize();
+});

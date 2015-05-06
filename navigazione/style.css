@@ -283,10 +283,6 @@ label {
     .carousel {
         height: 200px;
     }
-    small {
-        display: block;
-        margin-top: 0.2em;
-    }
 }
 
 @media (max-width: 767px) and (min-width: 480px) {
@@ -307,9 +303,10 @@ label {
     .masonry {
         width: 80%;
     }
-    /*.page-header, .page-header.text-right{
-        text-align: center
-    }*/
+    small {
+        display: block;
+        margin-top: 0.2em;
+    }
 }
 
 @media (min-width: 768px) {

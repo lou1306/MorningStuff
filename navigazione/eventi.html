@@ -27,7 +27,7 @@
 
 <body>
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
+    <!-- <div class="container"> -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
@@ -36,10 +36,10 @@
         <a data-toggle="tooltip" data-placement="bottom" title="Home page" class="navbar-brand has-tooltip" href="./">Morning Stuff</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" id="main_nav">
           <li><a href="./notizie.html">Notizie</a>
           </li>
-          <li class="active"><a href="./eventi.html">Eventi</a>
+          <li class="dropdown active"><a data-target="#one" href="./eventi.html">Eventi</a>
           </li>
           <li><a href="./bio.html">Bio</a>
           </li>
@@ -79,7 +79,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    <!-- </div> -->
   </nav>
   <div class="btn-group btn-group-lg social-mobile" role="group">
     <a class="btn btn-default soundcloud" href="#">

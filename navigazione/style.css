@@ -259,9 +259,15 @@ label {
 }
 
 .breadcrumb {
-    margin: 7px 0 7px 10px;
+    margin: 0;
     background-color: #feed96;
     font-weight: bold;
+}
+.breadcrumb > li {
+    padding: 7px 0;
+}
+.breadcrumb > :first-child{
+    padding-left: 10px;
 }
 /* MASONRY
 -------------------------------------------------- */

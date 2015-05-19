@@ -9,6 +9,9 @@ $(function(){
     $(window).resize(function(){
         if($(window).width() > 767){
             padding = $("#main_nav .active").position().left;
+            if(!element.hasClass("btn-group")){
+                padding += parseInt($("#main_nav .active a").css("padding-left"));
+            }
             align = "left";
         }
         else {
@@ -16,7 +19,8 @@ $(function(){
             align = "center";
             menu.css("overflow", "visible");
         }
-        element.css("padding-left", padding);
+        element.offset({"left":padding})
+        // element.css("padding-left", padding);
         menu.css("text-align", align)
     });
 })

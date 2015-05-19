@@ -11,34 +11,83 @@ body {
     padding-bottom: 40px;
     color: #222;
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size: 1.5em;
-    /*background-color: #f0f9f5;*/
+}
+
+.page-header,
+.navbar-inverse .navbar-brand {
+    font-family: 'Pacifico', Helvetica, Arial, sans-serif;
+}
+.page-header span {
+    font-family: cursive;
+}
+.social-mobile a, .social-mobile a:hover,
+.social-mobile a:active, .social-mobile a:focus,
+.social-mobile a:visited {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width:50%;
+}
+
+h3.share > a,
+a.list-group-item,
+.navbar-inverse,
+.btn, .btn-group {
+    text-decoration: none
 }
 
 footer {
     margin: 30px 1em;
 }
 
-footer .fa {
-    font-size: 48pt;
+footer .fa-arrow-circle-up {
+    font-size: 4em;
 }
 
 h1 {
     font-size: 2.6em;
 }
-h2 {
+h2,
+.navbar-inverse .navbar-brand {
     font-size: 2.1em;
 }
-h3 {
+
+.navbar-toggle,
+.social-mobile {
+    font-size: 2em;
+}
+
+h3,
+#social .fa,
+.carousel-control .fa {
     font-size: 1.8em;
 }
 small {
+    /* rispetto al parent */
     font-size: 0.65em;
 }
+
+/*------ COLORI ------*/
+
+.page-header,
+h2, h3,
+h1 small,
+h2 small,
 address .fa {
-    color: #666547
+    color: #666547;
+    /* Su #ffeb3 = 5.7  (WCAG AA)*/
 }
 
+.badge {
+    background-color: #666547;
+    color: #fff;
+    /* Su #666547 = 6 (WCAG AA) */
+}
+
+.secondary-menu,
+.row.featured {
+    background-color: #fffeb3;
+}
 
 
 /* NAVBAR
@@ -47,13 +96,11 @@ address .fa {
 
 .navbar-inverse {
     border: none;
-    background-color: #222;
 }
 /* Pulsante menu */
 
 .navbar-toggle {
     border: none;
-    font-size: 24pt;
     padding: 0;
     margin-top: 4px;
     margin-bottom: 0px;
@@ -61,25 +108,23 @@ address .fa {
 /* Menu mobile */
 
 .navbar-fixed-top .navbar-collapse {
-    /* Aumento l'altezza di 5px rispetto al default per evitare la scrollbar */
-    
+    /* 
+    Aumento l'altezza di 5px rispetto al default per evitare la scrollbar
+    (default: 340px) */
     max-height: 345px;
-    /* default: 340px */
 }
 /* Brand */
 
 .navbar-inverse .navbar-brand {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.1em;
     padding-top: 12px;
-    text-decoration: none;
+
 }
 
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-nav > .active > a {
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: none;
+    padding-left: 9px;
+    padding-right: 9px;
+
     color: #aaa;
     /* su #222 = 6.8 (WGAC AA)*/
 }
@@ -103,10 +148,12 @@ address .fa {
 }
 
 .navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus,
-.navbar-inverse .navbar-nav > li:not(.active):not(.language-header) > a:hover,
-.navbar-inverse .navbar-nav > li:not(.active):not(.language-header) > a:focus {
-    color: #ffeaad;
+.navbar-inverse .navbar-brand:focus {
+    color: #fffeb3;
+}
+.navbar-inverse .navbar-nav > li:not(.language-header) > a:hover,
+.navbar-inverse .navbar-nav > li:not(.language-header) > a:focus {
+    color: #ffe28a;
 }
 /* Selezione linguaggio */
 
@@ -114,37 +161,16 @@ address .fa {
     text-align: center;
     width: 50px;
 }
-/* Barra social per dispositivi mobile. Usiamo i colori dei rispettivi "brand" */
+/* Usiamo i colori dei rispettivi "brand" */
 
-.btn.soundcloud {
+.social-mobile a.soundcloud {
     background-color: #ff6600;
 }
 
-.btn.facebook {
+.social-mobile a.facebook {
     background-color: #3B5998;
 }
-
-.social-mobile {
-    width: 100%;
-    border-color: #5a5a5a
-}
-
-.social-mobile .btn {
-    padding-left: 0;
-    padding-right: 0;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 6px;
-    color: #e6e6e6;
-    width: 50%;
-}
 /* Pulsanti social */
-
-#social i,
-.social-mobile i {
-    font-size: 20pt;
-}
-
 #social > li > a {
     padding-top: 11px;
     padding-bottom: 11px;
@@ -174,7 +200,6 @@ address .fa {
     top: 50%;
     z-index: 5;
     display: inline-block;
-    font-size: 24pt;
 }
 
 .left .fa {
@@ -200,8 +225,6 @@ address .fa {
 -------------------------------------------------- */
 
 .row.featured {
-    background-color: #fffeb3;
-    border-radius: 6px;
     padding-bottom: 2em;
 }
 
@@ -211,17 +234,10 @@ address .fa {
     columns: 2 250px;
 }
 
-.badge {
-    background-color: #666547;
-    color: #fff;
-    /* Su #666547 = 6 (WCAG AA) */
-}
-
 /*------ PULSANTI ------*/
 .btn, .btn:visited {
     color: #000;
     font-weight: bold;
-    text-decoration: none;
 }
 .btn-primary {
   color: #000;
@@ -254,20 +270,6 @@ address .fa {
 }
 
 /*------ HEADER ------*/
-.page-header {
-    font-family: 'Pacifico', cursive;
-}
-.page-header span {
-    font-family: cursive;
-}
-
-.page-header,
-h2, h3,
-h1 small,
-h2 small {
-    color: #666547;
-    /* Su #ffeb3 = 5.7  (WCAG AA)*/
-}
 
 /*------ COLLEGAMENTI ------*/
 a.list-group-item-info {
@@ -313,11 +315,6 @@ a.list-group-item-info:hover {
     margin-top: 1em;
 }
 
-h3.share > a,
-a.list-group-item {
-    text-decoration: none
-}
-
 h3.share > .facebook {
     color: #3B5998;
 }
@@ -338,25 +335,30 @@ iframe {
 -------------------------------------------------- */
 
 .secondary-menu {
-    background-color: #fffeb3;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     text-align: center;
-}
-
-.secondary-menu >:first-child {
+    padding-top: 6px;
     padding-bottom: 6px;
 }
 
-.secondary-menu > form {
-    margin-left: 10px;
+/*.form-inline {
+    margin: 0 auto;
+}*/
+.form-inline > div {
+    width:auto;
+    padding: 0;
 }
 
-.form-control,
-label {
+.form-inline .form-control,
+.form-inline label {
     display: inline;
     width: auto;
     padding: 6px 1px;
+}
+
+.btn-group-justified {
+    width: 250px;
 }
 
 .breadcrumb {
@@ -412,12 +414,16 @@ label {
         display: block;
         margin-top: 0.2em;
     }
+    .btn-group-justified {
+        margin: 0 auto;
+    }
+    .secondary-menu > form button {
+        position: relative;
+        bottom: 2px;
+    }
 }
 
 @media (min-width: 768px) {
-    .secondary-menu >:first-child {
-        padding-top: 6px;
-    }
     .container-fluid {
         width: 90%;
         max-width: 1200px;

@@ -1,26 +1,21 @@
 $(function(){
-    var menu = $(".secondary-menu").css("max-height", 0);
+    var menu = $(".secondary-menu").hide();
     $(window).load(function(){
         $(window).resize();
-        menu.css("max-height", "200px")
+        menu.slideDown("fast");
     });
     var element = $(".secondary-menu > :first-child");
-    var padding, align;
+    var padding;
     $(window).resize(function(){
-        if($(window).width() > 767){
+        if($(window).width() > 767) {
             padding = $("#main_nav .active").position().left;
-            if(!element.hasClass("btn-group")){
+            if(!element.hasClass("btn-group")) {
                 padding += parseInt($("#main_nav .active a").css("padding-left"));
             }
-            align = "left";
+            element.offset({"left": padding});
         }
         else {
-            padding = 0;
-            align = "center";
-            menu.css("overflow", "visible");
+            element.css("left","");
         }
-        element.offset({"left":padding})
-        // element.css("padding-left", padding);
-        menu.css("text-align", align)
     });
 })

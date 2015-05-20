@@ -350,7 +350,7 @@ iframe {
 .secondary-menu {
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  text-align: center;
+  /*text-align: center;*/
   padding-top: 6px;
   padding-bottom: 6px;
 }
@@ -426,6 +426,9 @@ iframe {
   }
   .btn-group-justified {
     margin: 0 auto;
+  }
+  .secondary-menu {
+    text-align: center;
   }
   .secondary-menu > form button {
     position: relative;

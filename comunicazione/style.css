@@ -251,7 +251,7 @@ address .fa {
 .btn-primary {
   color: #000;
   background-color: #fb2e01;
-  border-color: #b42101;
+  border-color: #e12900;
 }
 
 .btn-primary:hover,
@@ -260,6 +260,7 @@ address .fa {
 .btn-primary.active {
   color: #000;
   background-color: #e12900;
+  border-color: #e12900;
   background-position: 0 -15px;
 }
 
@@ -272,12 +273,13 @@ address .fa {
 /*------ PANELS ------*/
 
 .panel-info > .panel-heading {
-  background-color: #666547;
-  color: #fffeb3;
+  background-color: #fffeb3;
+  color: #666547;
+  border-color: #ddd;
 }
 
 .panel-info {
-  border-color: #666547;
+  border-color: #ddd;
 }
 /*------ HEADER ------*/
 /*------ COLLEGAMENTI ------*/
@@ -350,7 +352,7 @@ iframe {
 .secondary-menu {
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  /*text-align: center;*/
+  text-align: center;
   padding-top: 6px;
   padding-bottom: 6px;
 }
@@ -367,13 +369,14 @@ iframe {
   padding: 6px 1px;
 }
 
-.btn-group-justified {
-  width: 250px;
+.btn-group-eventi .btn {
+  width: 120px;
 }
 
 .breadcrumb {
   margin: 0;
-  background-color: #feed96;
+  padding: 0;
+  background-color: transparent;
   font-weight: bold;
 }
 
@@ -439,7 +442,7 @@ iframe {
 @media (min-width: 768px) {
   .container-fluid {
     width: 90%;
-    max-width: 1200px;
+    max-width: 90em;
   }
 }
 /* Small (Tablet) */

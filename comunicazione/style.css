@@ -305,7 +305,7 @@ a:focus {
   text-decoration: underline;
 }
 
-a:visited {
+.container-fluid a:visited {
   color: #be2301;
 }
 

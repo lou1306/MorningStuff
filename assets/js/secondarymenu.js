@@ -1,5 +1,5 @@
 $(function(){
-    var menu = $(".secondary-menu").css("text-align", "left").hide();
+    var menu = $(".secondary-menu").hide();
     $(window).load(function(){
         $(window).resize();
         menu.slideDown("fast");
@@ -14,9 +14,11 @@ $(function(){
             if(element.hasClass("form-inline")) {
                 padding += parseInt($("#main_nav .active a").css("padding-left"));
             }
+            menu.css("text-align", "left");
             element.offset({"left": padding});
         }
         else {
+            menu.css("text-align", "center");
             element.css("left","");
         }
     });

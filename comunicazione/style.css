@@ -369,10 +369,6 @@ iframe {
   padding: 6px 1px;
 }
 
-.btn-group-eventi .btn {
-  width: 120px;
-}
-
 .breadcrumb {
   margin: 0;
   padding: 0;
@@ -436,6 +432,10 @@ iframe {
   .secondary-menu > form button {
     position: relative;
     bottom: 2px;
+  }
+
+  .btn-group-eventi .btn {
+    width: 130px;
   }
 }
 

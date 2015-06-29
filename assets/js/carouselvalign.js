@@ -9,9 +9,9 @@ function setMargin(selector, delay) {
     }, delay);
 }
 $(document).ready(function() {
-    $("#myCarousel").on("slide.bs.carousel", function() {
-            setMargin(".item.next img, .item.prev img", 0);
-        });
+    // $("#myCarousel").on("slide.bs.carousel", function() {
+    //         setMargin(".item.next img, .item.prev img", 0);
+    //     });
         /* Aspettiamo il caricamento delle immagini prima di posizionare la prima */
     $(document).imagesLoaded(function() {
             setMargin(".item.active img", 0);

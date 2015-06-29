@@ -179,10 +179,6 @@ address .fa {
   /* su #222 = 12.5 (WGAC AAA)*/
 }
 
-/*.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-  color: #eca10a;
-}*/
 
 .navbar-inverse .navbar-nav > li:not(.language-header) > a:hover,
 .navbar-inverse .navbar-nav > li:not(.language-header) > a:focus {
@@ -390,11 +386,6 @@ iframe {
   padding: 0;
 }
 
-.form-inline label {
-  color: #aaa;
-  font-weight: normal;
-}
-
 .form-inline .form-control,
 .form-inline label {
   display: inline;
@@ -484,11 +475,22 @@ iframe {
 @media (min-width: 768px) {
   .container-fluid {
     width: 90%;
+    padding-top: 2em;
     max-width: 90em;
+  }
+  .secondary-menu {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    left: 0;
+    z-index: 5;
   }
   .secondary-menu > :first-child {
     background-color: #000;
     border-radius: 0 0 4px 4px
+  }
+  .form-inline label {
+    color: #aaa;
   }
   body {
     box-shadow:

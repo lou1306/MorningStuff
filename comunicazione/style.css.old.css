@@ -16,7 +16,7 @@ body {
 
 .page-header,
 .navbar-inverse .navbar-brand {
-  font-family: 'Pacifico', Helvetica, Arial, sans-serif;
+  font-family: 'http://fonts.googleapis.com/css?family=Open+Sans%7CPacifico', Helvetica, Arial, sans-serif;
 }
 
 .page-header span {
